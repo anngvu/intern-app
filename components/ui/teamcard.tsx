@@ -2,15 +2,17 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardDescription, CardHeader,CardTitle } from "@/components/ui/card"
 
-interface Team {
-  id: number;
-  name: string;
-  description: string;
-}
 
-interface TeamCardProps {
-  teamId: number;
-}
+// Define suitable interface for Team and TeamCardProps
+
+
+// interface Team
+
+
+
+// interface TeamCardProps 
+
+
 
 const TeamCard: React.FC<TeamCardProps> = ({ teamId }) => {
   const [team, setTeam] = useState<Team | null>(null);
@@ -39,27 +41,20 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamId }) => {
     fetchTeam();
   }, [teamId]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+// handle rendering for various other states here
 
-  if (!team) {
-    return <div>Team not found</div>;
-  }
+
+
+
 
   return (
     <Card>
       <CardHeader>
         <div className="space-y-1">
           <CardTitle>
-            {team.name}
           </CardTitle>
-          <CardDescription>
-          {team.description}  
+          <CardDescription> 
           </CardDescription>
         </div>
       </CardHeader>
