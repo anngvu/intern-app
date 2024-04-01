@@ -12,7 +12,7 @@ import {
 export default function TeamCarousel() {
 
   // hard-code some teams here, though there can be another endpoint to fetch relevant teams
-  let TEAMS = [ 3416772, ]
+  let TEAMS = [ 3416772, 3423657, 3427329 ]
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
