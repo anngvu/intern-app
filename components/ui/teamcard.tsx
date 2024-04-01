@@ -12,7 +12,6 @@ interface TeamCardProps {
   teamId: number;
 }
 
-
 const TeamCard: React.FC<TeamCardProps> = ({ teamId }) => {
   const [team, setTeam] = useState<Team | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -54,7 +53,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamId }) => {
 
   return (
     <Card>
-      <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
+      <CardHeader>
         <div className="space-y-1">
           <CardTitle>
             {team.name}
@@ -62,8 +61,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamId }) => {
           <CardDescription>
           {team.description}  
           </CardDescription>
-        </div>
-        <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground">
         </div>
       </CardHeader>
     </Card>
